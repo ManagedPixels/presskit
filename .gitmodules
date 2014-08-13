@@ -1,0 +1,3 @@
+[submodule "timber"]
+	path = timber
+	url = https://github.com/jarednova/timber.git
