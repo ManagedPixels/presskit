@@ -64,7 +64,7 @@
                     </ul>
                     <form class="navbar-form navbar-right visible-lg">
                         <!--<div class="form-group">-->
-                            <!--<input type="text" class="form-control" ng-value="" ng-model="slug" placeholder="Your page slug"/>-->
+                        <!--<input type="text" class="form-control" ng-value="" ng-model="slug" placeholder="Your page slug"/>-->
                         <!--</div>-->
                         <!--<input type="text" placeholder="Email" class="form-control">-->
                         <!--</div>-->
@@ -87,10 +87,11 @@
         <div class="row table-cell ccode">
             <div class="">
                 <h1>
-                    <i class="fa fa-cog"></i><br>
-                    {{ settings.title }}
+                    <i class="fa fa-cog"></i>
+
                 </h1>
-                <p class="lead">{{ settings.slug }}</p>
+
+                <p class="lead">A WordPress theme starter kit!</p>
             </div>
         </div>
     </div>
@@ -121,6 +122,7 @@
             <div class="col-md-4 col-sm-6 col-lg-3">
                 <aside>
                     <h1>Lorem ipsum dolor.</h1>
+
                     <p>
                         Dicta dignissimos, dolor eius id maxime necessitatibus nesciunt tempore velit?
                     </p>
@@ -130,6 +132,7 @@
             <div class="col-md-4 col-sm-6 col-lg-3">
                 <aside>
                     <h1>Lorem ipsum dolor.</h1>
+
                     <p>
                         Eos exercitationem id inventore ipsa necessitatibus nesciunt perspiciatis quam
                         repudiandae!
@@ -146,7 +149,7 @@
             <div class="col-md-12">
                 <article class="post">
                     <figure>
-                        <img src="img/car-watch.JPG" alt="images" class="img-responsive"/>
+                        <img src="http://loremflickr.com/g/1120/460/technology" alt="images" class="img-responsive"/>
 
                     </figure>
                     <h1>Lorem ipsum dolor sit.</h1>
@@ -186,8 +189,11 @@
                             </div>
                             <div class="col-sm-10 col-md-11">
                                 <p>Author: John Hancok</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam necessitatibus porro quibusdam
-                                    recusandae? Doloremque et minima quidem? Aliquam, animi assumenda corporis doloribus ducimus ea illo
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam
+                                    necessitatibus porro quibusdam
+                                    recusandae? Doloremque et minima quidem? Aliquam, animi assumenda corporis doloribus
+                                    ducimus ea illo
                                     natus nemo ullam ut.
                                 </p>
                             </div>
@@ -203,31 +209,82 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <div class="post ng-scope" data-ng-repeat="title in data.sample_titles ">
-                    <!-- ngInclude: c.post_preview --><div data-ng-include="c.post_preview" class="ng-scope"><article class="ng-scope">
-                    <h1 class="ng-binding">A Sample Article...</h1>
+                <div class="post">
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi autem beatae
-                        consectetur delectus dolores eos excepturi expedita explicabo facere iure laudantium
-                        maxime mollitia nulla pariatur quidem ratione recusandae rem repellat repudiandae sequi,
-                        sit velit veritatis voluptatem voluptatum? Consectetur ea facere illum in molestiae nam
-                        nisi porro provident quaerat ratione rerum sed suscipit, totam velit vitae. Ad excepturi
-                        tempore voluptatum. <span class="read-more"><a href="#">Full Story <i class="fa fa-angle-double-right"></i></a></span></p>
-                    <!-- ngInclude: c.post_meta --><div data-ng-include="c.post_meta" class="ng-scope"><aside class="post-meta ng-scope">
-                    <ul class="list-inline">
-                        <li><i class="fa fa-angle-double-right"></i> Date: </li>
-                        <li><i class="fa fa-angle-double-right"></i> Tags: </li>
-                        <li><i class="fa fa-angle-double-right"></i> Comments: </li>
-                    </ul>
-                </aside></div>
+                    <!--articles-->
+                    <article class="">
+                        <h1>A Sample Article</h1>
 
-                </article></div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi autem beatae
+                            consectetur delectus dolores eos excepturi expedita explicabo facere iure laudantium
+                            maxime mollitia nulla pariatur quidem ratione recusandae rem repellat repudiandae sequi,
+                            sit velit veritatis voluptatem voluptatum? Consectetur ea facere illum in molestiae nam
+                            nisi porro provident quaerat ratione rerum sed suscipit, totam velit vitae. Ad excepturi
+                            tempore voluptatum. <span class="read-more"><a href="#">Full Story <i
+                                    class="fa fa-angle-double-right"></i></a></span></p>
+                        <!-- ngInclude: c.post_meta -->
+
+                            <aside class="post-meta">
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-angle-double-right"></i> Date:</li>
+                                    <li><i class="fa fa-angle-double-right"></i> Tags:</li>
+                                    <li><i class="fa fa-angle-double-right"></i> Comments:</li>
+                                </ul>
+                            </aside>
+                    </article>
+
+                    <!--articles-->
+                    <article class="">
+                        <h1>A Sample Article</h1>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi autem beatae
+                            consectetur delectus dolores eos excepturi expedita explicabo facere iure laudantium
+                            maxime mollitia nulla pariatur quidem ratione recusandae rem repellat repudiandae sequi,
+                            sit velit veritatis voluptatem voluptatum? Consectetur ea facere illum in molestiae nam
+                            nisi porro provident quaerat ratione rerum sed suscipit, totam velit vitae. Ad excepturi
+                            tempore voluptatum. <span class="read-more"><a href="#">Full Story <i
+                                    class="fa fa-angle-double-right"></i></a></span></p>
+                        <!-- ngInclude: c.post_meta -->
+
+                            <aside class="post-meta">
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-angle-double-right"></i> Date:</li>
+                                    <li><i class="fa fa-angle-double-right"></i> Tags:</li>
+                                    <li><i class="fa fa-angle-double-right"></i> Comments:</li>
+                                </ul>
+                            </aside>
+                    </article>
+
+                    <!--articles-->
+                    <article class="">
+                        <h1>A Sample Article</h1>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi autem beatae
+                            consectetur delectus dolores eos excepturi expedita explicabo facere iure laudantium
+                            maxime mollitia nulla pariatur quidem ratione recusandae rem repellat repudiandae sequi,
+                            sit velit veritatis voluptatem voluptatum? Consectetur ea facere illum in molestiae nam
+                            nisi porro provident quaerat ratione rerum sed suscipit, totam velit vitae. Ad excepturi
+                            tempore voluptatum. <span class="read-more"><a href="#">Full Story <i
+                                    class="fa fa-angle-double-right"></i></a></span></p>
+                        <!-- ngInclude: c.post_meta -->
+
+                            <aside class="post-meta">
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-angle-double-right"></i> Date:</li>
+                                    <li><i class="fa fa-angle-double-right"></i> Tags:</li>
+                                    <li><i class="fa fa-angle-double-right"></i> Comments:</li>
+                                </ul>
+                            </aside>
+                    </article>
+
+
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="sidebar">
                     <aside>
                         <h1>Free News Letter</h1>
+
                         <p>Get the latest News &AMP; Updates via email .</p>
                         <!--<div ng-include="e.subscribe"></div>-->
                         <form role="form" action="" class="ng-scope ng-pristine ng-valid">
@@ -273,8 +330,8 @@
     <div class="container footer">
 
         <div class="col-sm-6">
-                <p class="">© SG.Kit 2013 <!-- ngInclude: e.social --></p>
-                </div>
+            <p class="">© SG.Kit 2013 <!-- ngInclude: e.social --></p>
+        </div>
         <div class="col-sm-6">
                 <span class="pull-right">
                         <ul class="social list-inline ng-scope">
@@ -285,10 +342,10 @@
                         </ul>
                     </span>
 
-            </div>
         </div>
-        <!--<div ng-include="c.footer_copy"></div>-->
     </div>
+    <!--<div ng-include="c.footer_copy"></div>-->
+</div>
 </footer>
 </div>
 
@@ -327,15 +384,15 @@
 
 
 <script>
-//    var _gaq = [
-//        ['_setAccount', 'UA-XXXXX-X'],
-//        ['_trackPageview']
-//    ];
-//    (function (d, t) {
-//        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-//        g.src = '//www.google-analytics.com/ga.js';
-//        s.parentNode.insertBefore(g, s)
-//    }(document, 'script'));
+    //    var _gaq = [
+    //        ['_setAccount', 'UA-XXXXX-X'],
+    //        ['_trackPageview']
+    //    ];
+    //    (function (d, t) {
+    //        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+    //        g.src = '//www.google-analytics.com/ga.js';
+    //        s.parentNode.insertBefore(g, s)
+    //    }(document, 'script'));
 </script>
 </body>
 </html>
