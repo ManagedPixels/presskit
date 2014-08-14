@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/ManagedPixels/presskit",
   "devDependencies": {
-    "gulp": "^3.8.7"
+    "gulp": "^3.8.7",
+    "require-dir": "^0.1.0"
   }
 }
