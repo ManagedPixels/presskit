@@ -4,3 +4,4 @@
 [submodule "hybrid"]
 	path = hybrid
 	url = https://github.com/justintadlock/hybrid-core.git
+	ignore = 
