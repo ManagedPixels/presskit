@@ -47,6 +47,19 @@ function add_to_context($data) {
 	$data['site_url']     = site_url();
 	$data['is_home']      = is_home();
 
+	//pico theme variables converted to wordpress
+	$data['config']           = get_theme_mods();
+	$data['base_dir']         = WP_CONTENT_DIR;
+	$data['base_url']         = get_bloginfo('wpurl');
+	$data['theme_dir']        = get_stylesheet_directory();
+	$data['site_title']       = get_bloginfo('name');
+	$data['site_description'] = get_bloginfo('description');
+	$data['sample_widget']    = 'Please go to -- Admin > Apperance widgets and place any widgets you want to appear on your home page here';
+	$data['meta']             = '';
+	$data['pages']            = '';
+	$data['is_front_page']    = is_front_page();
+	$data['base_twig']        = $twig_base;
+
 	//sidebars
 	$sidebars['sidebar']      = Timber::get_widgets('primary-sidebar');
 	$sidebars['sidebar_2']    = Timber::get_widgets('sidebar-2');
@@ -60,21 +73,17 @@ function add_to_context($data) {
 	$data['sidebars'] = $sidebars;
 
 	// if ($bs_mobile->isMobile())
-
 	// //        /** get the wp template */
 	// //        add_filter('template_include', 'get_wp_template');
-
 	// /**
 	//  * mobile twig baase template
 	//  */
 	// if (file_exists(trailingslashit(get_template_directory()).'views/mobile/mobile.twig')) {
-	// 	$twig_base = 'mobile/mobile-base.twig';
+	//  $twig_base = 'mobile/mobile-base.twig';
 	// }
-
 	// if ($bs_mobile->isTablet() AND file_exists(trailingslashit(get_template_directory()).'views/mobile/tablet.twig')) {
-	// 	$twig_base = 'mobile/tablet.twig';
+	//  $twig_base = 'mobile/tablet.twig';
 	// }
-
 	// /**
 	//  * some variables for mobile
 	//  * {{ mobile.tablet }}
@@ -89,20 +98,8 @@ function add_to_context($data) {
 	// $data['mobile']      = $mobile;
 	// endif;
 
-	//pico theme variables converted to wordpress
-	$data['config']           = get_theme_mods();
-	$data['base_dir']         = WP_CONTENT_DIR;
-	$data['base_url']         = get_bloginfo('wpurl');
-	$data['theme_dir']        = get_stylesheet_directory();
-	$data['site_title']       = get_bloginfo('name');
-	$data['site_description'] = get_bloginfo('description');
-	$data['sample_widget']    = 'Please go to -- Admin > Apperance widgets and place any widgets you want to appear on your home page here';
-	$data['meta']             = '';
-	$data['pages']            = '';
-	$data['is_front_page']    = is_front_page();
-	$data['base_twig']        = $twig_base;
-	$data['theme_url']        = get_stylesheet_directory_uri();
 	return $data;
+
 }
 
 function add_to_twig($twig) {
@@ -122,7 +119,7 @@ function myfoo($text) {
 function header_styles() {
 	ob_start()
 	?>
-			    <link rel="shortcut icon" href="<?php echo Theme_Function::file_uri('images/favicon.ico');?>">
+					    <link rel="shortcut icon" href="<?php echo Theme_Function::file_uri('images/favicon.ico');?>">
 
 	<?php
 	return ob_get_clean();
