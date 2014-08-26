@@ -14,23 +14,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>A Feature Packed Style Guide Toolkit</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">    
+    <meta name="description" content="{{site.description}}">
+    <meta name="viewport" content="width=device-width">  
+    <link rel="pingback" href="{{site.pingback_url}}" />  
 {% endblock meta %}
 {% block links %}
     {{ function ("wp_head") }}    
-    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="css/bootstrap-styles.css"/>
-    <link rel="stylesheet" href="css/stylesheet.css"/>
-    <link rel="stylesheet" href="css/sg.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="fonts/open-sans/stylesheet.css"/>
-    <link rel="pingback" href="{{ bloginfo('pingback_url') }}">
+    <link rel="stylesheet" href="{{theme_url}}/fonts/fontawesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="{{theme_url}}/css/bootstrap-styles.css"/>
+    <link rel="stylesheet" href="{{theme_url}}/css/stylesheet.css"/>
+    <link rel="stylesheet" href="{{theme_url}}/css/sg.css">
+    <link rel="stylesheet" href="{{theme_url}}/css/style.css">
+    <link rel="stylesheet" href="{{theme_url}}/fonts/open-sans/stylesheet.css"/>    
     <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>    
 {% endblock links %}
-
 </head>
-
 {% endblock head %}
 <body class="home {{ body_class }}">
 <!--[if lt IE 8]>
@@ -41,10 +39,11 @@
 </p>
 <![endif]-->
 <div id="page" ng-controller="settingCtrl">
-<nav>
-    <!--<div data-ng-include="top_nav"></div>-->
+  {% block top_nav %} 
+  <nav>
+   <!--<div data-ng-include="top_nav"></div>-->
     <div class="container">
-
+  
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
@@ -88,11 +87,15 @@
                 <!--/.navbar-collapse -->
             </div>
         </div>
+    
 
     </div>
 
 </nav>
+{% endblock top_nav %}
+{% block header %}
 <header>
+
     <div class="container sg vtable">
         <div class="row table-cell ccode">
             <div class="">
@@ -105,9 +108,9 @@
             </div>
         </div>
     </div>
-
-
 </header>
+{% endblock header}
+{% block features %}
 <section id="features">
     <div class="container ccode">
         <div class="row features view-code ng-scope">
@@ -153,7 +156,10 @@
         </div>
     </div>
 </section>
+{% endblock features %}
+{% block articles %}
 <section id="articles">
+
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -214,13 +220,16 @@
             </div>
         </div>
     </div>
+    
 </section>
+{% endblock  articles %}
 <main>
+{% block main %}
     <div class="container">
         <div class="row">
             <div class="col-md-8">
+            {% block content }
                 <div class="post">
-
                     <!--articles-->
                     <article class="">
                         <h1>A Sample Article</h1>
@@ -286,9 +295,8 @@
                                 </ul>
                             </aside>
                     </article>
-
-
                 </div>
+            {% endblock content %}
             </div>
             <div class="col-md-4">
                 <div class="sidebar">
@@ -335,10 +343,12 @@
         </div>
 
     </div>
+{% endblock main %}
 </main>
 <footer>
+{% block footer %}
     <div class="container footer">
-
+    {% block footer_line %}    
         <div class="col-sm-6">
             <p class="">© SG.Kit 2013 <!-- ngInclude: e.social --></p>
         </div>
@@ -351,17 +361,15 @@
                             <li><i class="fa fa-rss-square"></i></li>
                         </ul>
                     </span>
-
         </div>
-    </div>
-    <!--<div ng-include="c.footer_copy"></div>-->
-</div>
+     {% endblock footer_line %}
+     </div>    
+   
 </footer>
 </div>
-
 <!--data-->
-
 <!--view source modal-->
+{% block modal %}
 <div id="source-modal" class="modal fade">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -375,22 +383,25 @@
         </div>
     </div>
 </div>
+{% endblock modal %}
 <!--go to top of page-->
 <div id="top-link">
     <a href="#page"><i class="fa fa-chevron-circle-up"></i></a>
 </div>
+{% block scripts}
+
 
 <!-- /container -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script src="js/vendor/angular/angular.min.js"></script>
+<script src="{{theme_url}}/js/vendor/angular/angular.min.js"></script>
 <!-- inject:js -->
 
-<script src="js/vendor/bootstrap.min.js"></script>
+<script src="{{theme_url}}/js/vendor/bootstrap.min.js"></script>
 <!-- endinject-->
-<script src="js/ccode.js"></script>
+<script src="{{theme_url}}/js/ccode.js"></script>
 
-<script src="js/main.js"></script>
-<script src="js/angular-js/controllers.js"></script>
+<script src="{{theme_url}}/js/main.js"></script>
+<script src="{{theme_url}}/js/angular-js/controllers.js"></script>
 
 
 <script>
@@ -404,5 +415,9 @@
     //        s.parentNode.insertBefore(g, s)
     //    }(document, 'script'));
 </script>
+{% endblock scripts}
+{{ function('wp_footer') }}
+
+{% endblock footer %}
 </body>
 </html>
