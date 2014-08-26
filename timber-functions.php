@@ -1,0 +1,135 @@
+<?php
+/**
+ * Timber theme functions file
+ * @package Wordpress
+ * @subpackage Theme
+ * @since 0.1
+ * @author Shawn Sandy <shawnsandy04@gmail.com>
+ */
+
+/**
+ * twig functions
+ */
+add_filter('get_twig', 'add_to_twig');
+add_filter('timber_context', 'add_to_context');
+
+define('THEME_URL', get_template_directory_uri());
+
+function get_wp_template($template) {
+
+}
+
+/**
+ *
+ * @param type $data
+ * @return string
+ */
+function detect_mobiles() {
+	return new Mobile_Detect();
+}
+
+function add_to_context($data) {
+	//default twig file
+	$twig_base = 'base.twig';
+	//theme twig replace base twig as default template
+	if (file_exists(get_template_directory().'/views/theme.twig')) {
+		$twig_base = 'theme.twig';
+	}
+
+	$bs_mobile = detect_mobiles();
+
+	/* this is where you can add your own data to Timber's context object */
+	$data['foo']          = 'bar';
+	$data['theme_url']    = get_stylesheet_directory_uri();
+	$data['is_logged_in'] = is_user_logged_in();
+	$data['theme_mod']    = get_theme_mods();
+	$data['options']      = wp_load_alloptions();
+	$data['site_url']     = site_url();
+	$data['is_home']      = is_home();
+
+	//sidebars
+	$sidebars['sidebar']      = Timber::get_widgets('primary-sidebar');
+	$sidebars['sidebar_2']    = Timber::get_widgets('sidebar-2');
+	$sidebars['info_1']       = Timber::get_widgets('info-1');
+	$sidebars['info_2']       = Timber::get_widgets('info-2');
+	$sidebars['info_3']       = Timber::get_widgets('info-3');
+	$sidebars['info_4']       = Timber::get_widgets('info-4');
+	$sidebars['home_sidebar'] = Timber::get_widgets('home-sidebar');
+	$sidebars['primary_menu'] = new TimberMenu('primary');
+
+	$data['sidebars'] = $sidebars;
+
+	// if ($bs_mobile->isMobile())
+
+	// //        /** get the wp template */
+	// //        add_filter('template_include', 'get_wp_template');
+
+	// /**
+	//  * mobile twig baase template
+	//  */
+	// if (file_exists(trailingslashit(get_template_directory()).'views/mobile/mobile.twig')) {
+	// 	$twig_base = 'mobile/mobile-base.twig';
+	// }
+
+	// if ($bs_mobile->isTablet() AND file_exists(trailingslashit(get_template_directory()).'views/mobile/tablet.twig')) {
+	// 	$twig_base = 'mobile/tablet.twig';
+	// }
+
+	// /**
+	//  * some variables for mobile
+	//  * {{ mobile.tablet }}
+	//  * {% if mobile.tablet %}do something{% emdif %}
+	//  */
+	// $mobile['is_mobile'] = true;
+	// $mobile['tablet']    = $bs_mobile->isTablet();
+	// $mobile['android']   = $bs_mobile->isAndroidOS();
+	// $mobile['ios']       = $bs_mobile->isiOS();
+	// $mobile['iphone']    = $bs_mobile->isiPhone();
+	// $mobile['ipad']      = $bs_mobile->isiPad();
+	// $data['mobile']      = $mobile;
+	// endif;
+
+	//pico theme variables converted to wordpress
+	$data['config']           = get_theme_mods();
+	$data['base_dir']         = WP_CONTENT_DIR;
+	$data['base_url']         = get_bloginfo('wpurl');
+	$data['theme_dir']        = get_stylesheet_directory();
+	$data['site_title']       = get_bloginfo('name');
+	$data['site_description'] = get_bloginfo('description');
+	$data['sample_widget']    = 'Please go to -- Admin > Apperance widgets and place any widgets you want to appear on your home page here';
+	$data['meta']             = '';
+	$data['pages']            = '';
+	$data['is_front_page']    = is_front_page();
+	$data['base_twig']        = $twig_base;
+	$data['theme_url']        = get_stylesheet_directory_uri();
+	return $data;
+}
+
+function add_to_twig($twig) {
+	/* this is where you can add your own fuctions to twig */
+	$twig->addExtension(new Twig_Extension_StringLoader());
+	$twig->addFilter('myfoo', new Twig_Filter_Function('myfoo'));
+	return $twig;
+}
+
+function myfoo($text) {
+	$text .= ' bar!';
+	return $text;
+}
+/**
+ * add any header styles here
+ */
+function header_styles() {
+	ob_start()
+	?>
+			    <link rel="shortcut icon" href="<?php echo Theme_Function::file_uri('images/favicon.ico');?>">
+
+	<?php
+	return ob_get_clean();
+}
+
+function timber_widgets($index = 'primary-sidebar') {
+	ob_start();
+	dynamic_sidebar($index);
+	return ob_get_clean();
+}
