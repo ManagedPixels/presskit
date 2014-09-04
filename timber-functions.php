@@ -24,9 +24,9 @@ function get_wp_template($template) {
  * @param type $data
  * @return string
  */
-function detect_mobiles() {
-	return new Mobile_Detect();
-}
+// function detect_mobiles() {
+// 	return new Mobile_Detect();
+// }
 
 function add_to_context($data) {
 	//default twig file
@@ -35,8 +35,6 @@ function add_to_context($data) {
 	if (file_exists(trailingslashit(get_template_directory()).'/views/theme.twig')) {
 		$twig_base = 'theme.twig';
 	}
-
-	$bs_mobile = detect_mobiles();
 
 	/* this is where you can add your own data to Timber's context object */
 	$data['foo']          = 'bar';
@@ -71,6 +69,8 @@ function add_to_context($data) {
 	$sidebars['primary_menu'] = new TimberMenu('primary');
 
 	$data['sidebars'] = $sidebars;
+
+	// $bs_mobile = detect_mobiles();
 
 	// if ($bs_mobile->isMobile())
 	// //        /** get the wp template */
@@ -119,7 +119,7 @@ function myfoo($text) {
 function header_styles() {
 	ob_start()
 	?>
-						    <link rel="shortcut icon" href="<?php echo Theme_Function::file_uri('images/favicon.ico');?>">
+								    <link rel="shortcut icon" href="<?php echo Theme_Function::file_uri('images/favicon.ico');?>">
 
 	<?php
 	return ob_get_clean();
