@@ -9,14 +9,14 @@
  |
  | There are more options than you see here, these are just the ones that are
  | set internally. See the website for more info.
- | browser-sync start --config bs-config.js
+ |
  |
  */
 module.exports = {
-    "files": ["**/*.html", "**/*.js", "**/*.css"],
-    "server": "./",
-    "proxy": false,
-    "port": 3000,
+    "files": ["**/*.php","**/*.css","**/*.twig"],
+    "server": false,
+    "proxy": "wordpress.dev",
+    "port": 3035,
     "ghostMode": {
         "clicks": true,
         "scroll": true,
