@@ -65,19 +65,16 @@ function install_guide($templates) {
 // endif;
 
 /**
- * sudo function
- */
-function _bj_layout() {
-
-}
-
-/**
  * ***************THEME OPTIONS *************************************************
  */
 
 if (file_exists(get_template_directory().'/presskit-functions.php')):
 include_once get_template_directory().'/presskit-functions.php';
 endif;
+
+/**
+ * Timber functions
+ */
 
 if (file_exists(get_template_directory().'/timber-functions.php')):
 include_once get_template_directory().'/timber-functions.php';
@@ -87,9 +84,6 @@ endif;
  * ******************************************************************************
  * custom functions create this file and add your own custom functions
  */
-if (file_exists(TEMPLATEPATH.'/custom_functions.php')) {
-	include_once TEMPLATEPATH.'/custom_functions.php';
-}
 
 /**
  * ******************************************************************************
