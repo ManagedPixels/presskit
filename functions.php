@@ -48,8 +48,8 @@ function install_guide($templates) {
 }
 
 // if (!class_exists('cwp') OR !class_exists('al_manager') OR !$wp_version > 3.4):
-// add_filter('template_include', 'install_guide');
-// return;
+//     add_filter('template_include', 'install_guide');
+//     return;
 // endif;
 
 /**
@@ -65,26 +65,25 @@ function install_guide($templates) {
 // endif;
 
 /**
- * sudo function
- */
-function _bj_layout() {
-
-}
-
-/**
  * ***************THEME OPTIONS *************************************************
  */
-if (file_exists(get_template_directory().'/theme-options.php')):
-include_once get_template_directory().'/theme-options.php';
+
+if (file_exists(get_template_directory().'/presskit-functions.php')):
+include_once get_template_directory().'/presskit-functions.php';
+endif;
+
+/**
+ * Timber functions
+ */
+
+if (file_exists(get_template_directory().'/timber-functions.php')):
+include_once get_template_directory().'/timber-functions.php';
 endif;
 
 /**
  * ******************************************************************************
  * custom functions create this file and add your own custom functions
  */
-if (file_exists(TEMPLATEPATH.'/custom_functions.php')) {
-	include_once TEMPLATEPATH.'/custom_functions.php';
-}
 
 /**
  * ******************************************************************************
@@ -117,7 +116,7 @@ function bj_setup() {
 	/**
 	 * Custom template tags for this theme.
 	 */
-	require (get_template_directory().'/inc/template-tags.php');
+	//require (get_template_directory().'/inc/template-tags.php');
 
 	/**
 	 * Custom functions that act independently of the theme templates
@@ -135,11 +134,11 @@ function bj_setup() {
 	 * If you're building a theme based on BJ, use a find and replace
 	 * to change 'bj' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain('bj', get_template_directory().'/languages');
+	//load_theme_textdomain('bj', get_template_directory().'/languages');
 }
 
 endif;// bj_setup
-//add_action('after_setup_theme', 'bj_setup');
+add_action('after_setup_theme', 'bj_setup');
 
 /**
  * Enqueue scripts and styles
@@ -159,7 +158,7 @@ function bj_scripts() {
 	}
 }
 
-//add_action('wp_enqueue_scripts', 'bj_scripts');
+add_action('wp_enqueue_scripts', 'bj_scripts');
 
 /**
  * Implement the Custom Header feature
