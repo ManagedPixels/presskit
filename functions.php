@@ -161,6 +161,24 @@ function bj_scripts() {
 add_action('wp_enqueue_scripts', 'bj_scripts');
 
 /**
- * Implement the Custom Header feature
+ * composer test
  */
-//require( get_template_directory() . '/inc/custom-header.php' );
+// $client = new GuzzleHttp\Client();
+// $res    = $client->get('https://api.github.com/user', [
+// 		'auth' => ['shawnsandy', 'ss7860501624isme']
+// 	]);
+// echo $res->getStatusCode();// 200
+// echo $res->getHeader('content-type');
+// // 'application/json; charset=utf8'
+// echo $res->getBody();// {"type":"User"...'
+// var_export($res->json());
+
+// $foo = new MpLoader\foo();
+
+// $mobile = new Mobile_Detect();
+// if (!$mobile->isMobile()) {
+// 	echo "<h1>Mobile detected</h1>";
+// 	;
+// }
+
+//$foo->print_it();

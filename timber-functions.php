@@ -70,32 +70,34 @@ function add_to_context($data) {
 
 	$data['sidebars'] = $sidebars;
 
-	// $bs_mobile = detect_mobiles();
+	$mobile_press = new Mobile_Detect();
 
-	// if ($bs_mobile->isMobile())
-	// //        /** get the wp template */
-	// //        add_filter('template_include', 'get_wp_template');
-	// /**
-	//  * mobile twig baase template
-	//  */
-	// if (file_exists(trailingslashit(get_template_directory()).'views/mobile/mobile.twig')) {
-	//  $twig_base = 'mobile/mobile-base.twig';
-	// }
-	// if ($bs_mobile->isTablet() AND file_exists(trailingslashit(get_template_directory()).'views/mobile/tablet.twig')) {
-	//  $twig_base = 'mobile/tablet.twig';
-	// }
-	// /**
-	//  * some variables for mobile
-	//  * {{ mobile.tablet }}
-	//  * {% if mobile.tablet %}do something{% emdif %}
-	//  */
-	// $mobile['is_mobile'] = true;
-	// $mobile['tablet']    = $bs_mobile->isTablet();
-	// $mobile['android']   = $bs_mobile->isAndroidOS();
-	// $mobile['ios']       = $bs_mobile->isiOS();
-	// $mobile['iphone']    = $bs_mobile->isiPhone();
-	// $mobile['ipad']      = $bs_mobile->isiPad();
-	// $data['mobile']      = $mobile;
+	if ($mobile_press->isMobile())
+	//        /** get the wp template */
+	//        add_filter('template_include', 'get_wp_template');
+	/**
+	 * mobile twig baase template
+	 */{
+		if (file_exists(trailingslashit(get_template_directory()).'views/mobile/mobile.twig')) {
+			$twig_base = 'mobile/mobile.twig';
+		}
+	}
+
+	if ($bs_mobile->isTablet() AND file_exists(trailingslashit(get_template_directory()).'views/mobile/tablet.twig')) {
+		$twig_base = 'mobile/tablet.twig';
+	}
+	/**
+	 * some variables for mobile
+	 * {{ mobile.tablet }}
+	 * {% if mobile.tablet %}do something{% emdif %}
+	 */
+	$mobile['is_mobile'] = true;
+	$mobile['tablet']    = $mobile_press->isTablet();
+	$mobile['android']   = $mobile_press->isAndroidOS();
+	$mobile['ios']       = $mobile_press->isiOS();
+	$mobile['iphone']    = $mobile_press->isiPhone();
+	$mobile['ipad']      = $mobile_press->isiPad();
+	$data['mobile']      = $mobile;
 	// endif;
 
 	return $data;
@@ -119,7 +121,7 @@ function myfoo($text) {
 function header_styles() {
 	ob_start()
 	?>
-								    <link rel="shortcut icon" href="<?php echo Theme_Function::file_uri('images/favicon.ico');?>">
+											    <link rel="shortcut icon" href="<?php echo Theme_Function::file_uri('images/favicon.ico');?>">
 
 	<?php
 	return ob_get_clean();
