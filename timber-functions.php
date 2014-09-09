@@ -90,7 +90,7 @@ function add_to_context($data) {
 	/**
 	 * some variables for mobile
 	 * {{ mobile.tablet }}
-	 * {% if mobile.tablet %}do something{% emdif %}
+	 * {% if mobile.tablet %}do something {% endif %}
 	 */
 	$mobile['is_mobile'] = true;
 	$mobile['tablet']    = $mobile_press->isTablet();
@@ -122,7 +122,7 @@ function myfoo($text) {
 function header_styles() {
 	ob_start()
 	?>
-												    <link rel="shortcut icon" href="<?php echo Theme_Function::file_uri('images/favicon.ico');?>">
+													    <link rel="shortcut icon" href="<?php echo Theme_Function::file_uri('images/favicon.ico');?>">
 
 	<?php
 	return ob_get_clean();
