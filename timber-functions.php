@@ -84,7 +84,7 @@ function add_to_context($data) {
 		}
 	}
 
-	if ($bs_press->isTablet() AND file_exists(trailingslashit(get_template_directory()).'views/mobile/tablet.twig')) {
+	if ($mobile_press->isTablet() AND file_exists(trailingslashit(get_template_directory()).'views/mobile/tablet.twig')) {
 		$twig_base = 'mobile/tablet.twig';
 	}
 	/**
@@ -122,7 +122,7 @@ function myfoo($text) {
 function header_styles() {
 	ob_start()
 	?>
-													    <link rel="shortcut icon" href="<?php echo Theme_Function::file_uri('images/favicon.ico');?>">
+														    <link rel="shortcut icon" href="<?php echo Theme_Function::file_uri('images/favicon.ico');?>">
 
 	<?php
 	return ob_get_clean();
