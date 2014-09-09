@@ -72,18 +72,19 @@ function add_to_context($data) {
 
 	$mobile_press = new Mobile_Detect();
 
-	if ($mobile_press->isMobile())
-	//        /** get the wp template */
-	//        add_filter('template_include', 'get_wp_template');
-	/**
-	 * mobile twig baase template
-	 */{
+	if ($mobile_press->isMobile()) {
+		//        /** get the wp template */
+		//        add_filter('template_include', 'get_wp_template');
+		/**
+		 * mobile twig baase template
+		 */
+
 		if (file_exists(trailingslashit(get_template_directory()).'views/mobile/mobile.twig')) {
 			$twig_base = 'mobile/mobile.twig';
 		}
 	}
 
-	if ($bs_mobile->isTablet() AND file_exists(trailingslashit(get_template_directory()).'views/mobile/tablet.twig')) {
+	if ($bs_press->isTablet() AND file_exists(trailingslashit(get_template_directory()).'views/mobile/tablet.twig')) {
 		$twig_base = 'mobile/tablet.twig';
 	}
 	/**
@@ -121,7 +122,7 @@ function myfoo($text) {
 function header_styles() {
 	ob_start()
 	?>
-											    <link rel="shortcut icon" href="<?php echo Theme_Function::file_uri('images/favicon.ico');?>">
+												    <link rel="shortcut icon" href="<?php echo Theme_Function::file_uri('images/favicon.ico');?>">
 
 	<?php
 	return ob_get_clean();
