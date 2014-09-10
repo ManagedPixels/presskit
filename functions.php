@@ -183,4 +183,8 @@ add_action('wp_enqueue_scripts', 'bj_scripts');
 
 //$foo->print_it();
 
-$am = new MpLoader\Admin\Menu();
+//$amenu = MpLoader\Admin\Menu::factory();
+$press_adminbar = MpLoader\Admin\PostMenus::factory()->create_nodes();
+
+$press_sample = MpLoader\Post\CustomTypes::factory('inde_shop')->register_post_type('My Shop');
+
