@@ -182,3 +182,5 @@ add_action('wp_enqueue_scripts', 'bj_scripts');
 // }
 
 //$foo->print_it();
+
+$am = new MpLoader\Admin\Menu();
