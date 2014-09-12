@@ -42,10 +42,10 @@ p {
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
 }
-header,
-main,
-section,
-footer {
+#page > header,
+#page > main,
+#page > section,
+#page > footer {
   padding-top: 80px;
 }
 figure {
@@ -63,13 +63,13 @@ figure {
   margin-bottom: 10px;
 }
 /* ---- header ---- */
-header {
-  height: 250px;
-  min-height: 250px;
+#page > header {
+  height: 350px;
+  min-height: 350px;
   text-align: center;
   background-color: #fafafa;
   color: #808080;
-  padding: 0;
+  padding-top: 0;
 }
 .home header {
   height: 500px;
@@ -243,3 +243,45 @@ footer h1 {
   font-weight: bolder;
 }
 /* --- style guide --- */
+/* wordpress comments */
+
+.comments {
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-top: 40px;
+  border-radius: 5px;
+}
+
+.comments code {
+  white-space: normal;
+  font-size:12px;
+  font-size:1.2rem;
+}
+
+.comments label {
+  display: block;
+
+}
+
+.comments textarea {
+   border-radius: 5px;
+   width: 80%
+}
+
+#respond { } 
+#reply-title { } 
+#cancel-comment-reply-link { }
+#commentform { } 
+#author { } 
+#email { } 
+#url { } 
+#comment 
+#submit
+.comment-notes { } 
+.required { }
+.comment-form-author { }
+.comment-form-email { } 
+.comment-form-url { }
+.comment-form-comment { } 
+.form-allowed-tags { } 
+.form-submit{};
