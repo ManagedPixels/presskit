@@ -186,5 +186,6 @@ add_action('wp_enqueue_scripts', 'bj_scripts');
 //$amenu = MpLoader\Admin\Menu::factory();
 $press_adminbar = MpLoader\Admin\PostMenus::factory()->create_nodes();
 
-$press_sample = MpLoader\Post\CustomTypes::factory('inde_shop')->register_post_type('My Shop');
+//create a custom post 
+$press_sample = MpLoader\Post\CustomTypes::factory('indeshop')->register_post_type('Indie Shop');
 
