@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-ng-app="sgApp" data-ng-cloak>
+<html data-ng-app="sgApp" data-ng-cloak class="no-js">
 {% block head %}
 <!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -8,7 +8,7 @@
 <!--[if IE 8]>
 <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js"> <!--<![endif]-->
+<!--<![endif]-->
 <head>
 {% block meta %}
     <meta charset="utf-8">
@@ -31,13 +31,7 @@
 </head>
 {% endblock head %}
 <body class="{{ body_class }}">
-<!--[if lt IE 8]>
-<p class="chromeframe bg-danger">You are using an <strong>outdated</strong> browser. Please <a
-        href="http://browsehappy.com/">upgrade your browser</a> or <a
-        href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your
-    experience.
-</p>
-<![endif]-->
+
 <div id="page" ng-controller="settingCtrl">
   {% block top_nav %} 
   <nav>
@@ -97,7 +91,7 @@
 <header>
 
     <div class="container sg vtable">
-        <div class="row table-cell ccode">
+        <div class="row table-cell ccode-">
             <div class="">
                 <h1>
                     <i class="fa fa-cog"></i>
@@ -112,7 +106,7 @@
 {% endblock header %}
 {% block features %}
 <section id="features">
-    <div class="container ccode">
+    <div class="container ccode-">
         <div class="row features view-code ng-scope">
             <div class="col-md-4 col-sm-6 col-lg-3">
                 <aside>
@@ -284,15 +278,16 @@
     </div>
 {% endblock main %}
 </main>
-<footer>
 {% block footer %}
+<footer>
+
     <div class="container footer">
     {% block footer_line %}    
-        <div class="col-sm-6">
-            <p class="">© SG.Kit 2013 <!-- ngInclude: e.social --></p>
+        <div class="col-sm-12">
+            <p class="text-center">© SG.Kit 2013 <!-- ngInclude: e.social --></p>
         </div>
-        <div class="col-sm-6">
-                <span class="pull-right">
+        <div class="col-sm-12">
+                <span class="text-center">
                         <ul class="social list-inline ng-scope">
                             <li><i class="fa fa-twitter-square"></i></li>
                             <li><i class="fa fa-facebook-square"></i></li>
@@ -305,25 +300,9 @@
      </div>    
    
 </footer>
-</div>
+
 <!--data-->
-<!--view source modal-->
-{% block modal %}
-<div id="source-modal" class="modal fade">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Source Code</h4>
-            </div>
-            <div class="modal-body">
-                <pre></pre>
-            </div>
-        </div>
-    </div>
-</div>
-{% endblock modal %}
-<!--go to top of page-->
+
 <div id="top-link">
     <a href="#page"><i class="fa fa-chevron-circle-up"></i></a>
 </div>
@@ -358,5 +337,6 @@
 {{ function('wp_footer') }}
 
 {% endblock footer %}
+</div>
 </body>
 </html>
