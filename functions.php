@@ -189,5 +189,6 @@ $press_adminbar = MpLoader\Admin\PostMenus::factory()->create_nodes();
 //create a custom post 
 $press_sample = MpLoader\Post\CustomTypes::factory('indeshop')->register_post_type('Indie Shop');
 
-$press_widget = MpLoader\Utilities\Widget::factory();
 
+//load the 2 default widgets
+$press_widget = MpLoader\Utilities\Widget::factory();

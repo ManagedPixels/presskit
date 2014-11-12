@@ -31,7 +31,7 @@ h5 {
 .sidebar h4,
 .sidebar h5 {
   margin-top: 0;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 p {
   font-size: 16px;
@@ -71,7 +71,7 @@ figure {
   color: #808080;
   padding-top: 0;
 }
-.home header {
+.home #page > header {
   height: 500px;
 }
 header h1 {
