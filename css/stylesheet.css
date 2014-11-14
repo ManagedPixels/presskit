@@ -1,287 +1,297 @@
 /* ==========================================================================
    theme styles
    ========================================================================== */
+
 /* navbars */
+
 /* navbars */
+
 /* mixins
 use full theme mixins
 */
+
 /* sg-fonts font mixins */
+
 /* --- page --- */
+
 body {
-  height: 100% !important;
-  font-family: 'OpenSansRegular', Arial, sans-serif;
-  -webkit-font-smoothing: antialiased !important;
+    height: 100% !important;
+    font-family: 'OpenSansRegular', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased !important;
 }
 #page {
-  color: #404040;
-  padding-top: 80px;
+    color: #404040;
+    padding-top: 80px;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'OpenSansSemibold';
-  line-height: 1.5;
+    font-family: 'OpenSansSemibold';
+    line-height: 1.5;
 }
 .sidebar h1,
 .sidebar h2,
 .sidebar h3,
 .sidebar h4,
 .sidebar h5 {
-  margin-top: 0;
-  /* margin-bottom: 20px; */
+    margin-top: 0;
+    /* margin-bottom: 20px; */
 }
 p {
-  font-size: 16px;
-  font-size: 1.6rem;
-  -webkit-box-pack: end;
-  -moz-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
+    font-size: 16px;
+    font-size: 1.6rem;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
 }
 #page > header,
 #page > main,
 #page > section,
 #page > footer {
-  padding-top: 80px;
+    padding-top: 80px;
 }
 figure {
-  margin-bottom: 10px;
-  display: block;
+    margin-bottom: 10px;
+    display: block;
 }
 .navbar-toggle .fa {
-  font-size: 16px;
+    font-size: 16px;
 }
 .ccode {
-  cursor: pointer;
+    cursor: pointer;
 }
 /* --- forms --- */
+
 .input-group {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 /* ---- header ---- */
+
 #page > header {
-  height: 350px;
-  min-height: 350px;
-  text-align: center;
-  background-color: #fafafa;
-  color: #808080;
-  padding-top: 0;
+    height: 350px;
+    min-height: 350px;
+    text-align: center;
+    background-color: #fafafa;
+    color: #808080;
+    padding-top: 0;
 }
 .home #page > header {
-  height: 500px;
+    height: 500px;
 }
 header h1 {
-  font-size: 83px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+    font-size: 83px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 header h1:hover {
-  color: #222222;
+    color: #222222;
 }
 header .vtable {
-  display: table;
-  height: inherit !important;
-  width: 100% !important;
+    display: table;
+    height: inherit !important;
+    width: 100% !important;
 }
 header .vtable .table-cell {
-  display: table-cell;
-  width: 100%;
-  vertical-align: middle;
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
 }
 header .vtable .table-cell {
-  display: table-cell;
-  width: 100%;
-  vertical-align: middle;
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
 }
 /* --- footer --- */
+
 footer .footer .copy-info {
-  padding: 20px;
-  font-size: 1.4;
+    padding: 20px;
+    font-size: 1.4;
 }
 footer .footer .copy-info .social i {
-  font-size: 16px;
+    font-size: 16px;
 }
 footer .footer .copy-info p {
-  font-size: 14px;
-  font-size: 1.4rem;
+    font-size: 14px;
+    font-size: 1.4rem;
 }
 footer .footer .social i {
-  font-size: 32px;
+    font-size: 32px;
 }
 /* --- content --- */
+
 main .post .post-meta {
-  font-size: 14px;
-  font-size: 1.4rem;
-  border-bottom: 1px solid #f1f1f1;
+    font-size: 14px;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #f1f1f1;
 }
 main .post .read-more {
-  display: block;
-  padding: 10px;
-  text-align: right;
-  font-size: 14px;
-  font-size: 1.4rem;
+    display: block;
+    padding: 10px;
+    text-align: right;
+    font-size: 14px;
+    font-size: 1.4rem;
 }
 main .sidebar ul {
-  padding-left: 0;
+    padding-left: 0;
 }
 main .sidebar ul li {
-  list-style: none;
+    list-style: none;
 }
 article .author {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  border-top: 1px solid #f1f1f1;
-  border-bottom: 1px solid #f1f1f1;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
 }
 article .author p {
-  font-size: 14px;
-  font-size: 1.4rem;
+    font-size: 14px;
+    font-size: 1.4rem;
 }
 article .author .avatar {
-  min-height: 80px;
-  min-width: 80px;
-  max-width: 80px;
-  background-color: #222222;
+    min-height: 80px;
+    min-width: 80px;
+    max-width: 80px;
+    background-color: #222222;
 }
 /* --- page elements --- */
+
 #top-link {
-  position: fixed;
-  bottom: 100px;
-  right: 20px;
-  z-index: 9999;
-  font-size: 36px;
-  padding: 10px;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 9999;
+    font-size: 36px;
+    padding: 10px;
 }
 #top-link a {
-  color: #808080;
+    color: #808080;
 }
 .btn {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 .headlines {
-  font-size: 101px;
-  font-size: 10.1rem;
+    font-size: 101px;
+    font-size: 10.1rem;
 }
 .titles {
-  font-size: 82px;
-  font-size: 8.2rem;
+    font-size: 82px;
+    font-size: 8.2rem;
 }
 .subtitles {
-  font-size: 68px;
-  font-size: 6.8rem;
+    font-size: 68px;
+    font-size: 6.8rem;
 }
 .xxlarge {
-  font-size: 52px;
-  font-size: 5.2rem;
+    font-size: 52px;
+    font-size: 5.2rem;
 }
 .xlarge {
-  font-size: 41px;
-  font-size: 4.1rem;
+    font-size: 41px;
+    font-size: 4.1rem;
 }
 .large {
-  font-size: 32px;
-  font-size: 3.2rem;
+    font-size: 32px;
+    font-size: 3.2rem;
 }
 .medium {
-  font-size: 26px;
-  font-size: 2.6rem;
+    font-size: 26px;
+    font-size: 2.6rem;
 }
 .default-font {
-  font-size: 16px;
-  font-size: 1.6rem;
+    font-size: 16px;
+    font-size: 1.6rem;
 }
 .small {
-  font-size: 14px;
-  font-size: 1.4rem;
+    font-size: 14px;
+    font-size: 1.4rem;
 }
 .tiny {
-  font-size: 12px;
-  font-size: 1.2rem;
+    font-size: 12px;
+    font-size: 1.2rem;
 }
 h1 {
-  font-size: 51px;
-  font-size: 5.1rem;
+    font-size: 51px;
+    font-size: 5.1rem;
 }
 h2 {
-  font-size: 41px;
-  font-size: 4.1rem;
+    font-size: 41px;
+    font-size: 4.1rem;
 }
 h3 {
-  font-size: 31px;
-  font-size: 3.1rem;
+    font-size: 31px;
+    font-size: 3.1rem;
 }
 header h1 {
-  font-size: 101px;
-  font-size: 10.1rem;
+    font-size: 101px;
+    font-size: 10.1rem;
 }
 section h1 {
-  font-size: 68px;
-  font-size: 6.8rem;
+    font-size: 68px;
+    font-size: 6.8rem;
 }
 aside h1 {
-  font-size: 26px;
-  font-size: 2.6rem;
+    font-size: 26px;
+    font-size: 2.6rem;
 }
 article h1 {
-  font-size: 41px;
-  font-size: 4.1rem;
+    font-size: 41px;
+    font-size: 4.1rem;
 }
 footer h1 {
-  font-size: 16px;
-  font-size: 1.6rem;
-  font-weight: bolder;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: bolder;
 }
 /* --- style guide --- */
+
 /* wordpress comments */
 
 .comments {
-  padding: 20px;
-  background-color: #f9f9f9;
-  margin-top: 40px;
-  border-radius: 5px;
+    padding: 20px;
+    /*    padding-top: 40px;*/
+    /*    background-color: #f9f9f9;*/
+    margin-top: 40px;
+    border-radius: 1px;
+    border-top: 1px solid RGBA(249, 249, 249, 1);
+    padding-left: 0;
 }
-
 .comments code {
-  white-space: normal;
-  font-size:12px;
-  font-size:1.2rem;
+    white-space: normal;
+    font-size: 12px;
+    font-size: 1.2rem;
 }
-
 .comments label {
-  display: block;
-
+    display: block;
 }
-
 .comments textarea {
-   border-radius: 5px;
-   width: 80%
+    border-radius: 1px;
+    width: 80%;
+    border-color: RGBA(121, 121, 121, 1);
+    border-style: dotted;
+    background-color: RGBA(249, 249, 249, 1);
 }
-
-#respond { } 
-#reply-title { } 
-#cancel-comment-reply-link { }
-#commentform { } 
-#author { } 
-#email { } 
-#url { } 
-#comment 
-#submit
-.comment-notes { } 
-.required { }
-.comment-form-author { }
-.comment-form-email { } 
-.comment-form-url { }
-.comment-form-comment { } 
-.form-allowed-tags { } 
-.form-submit{};
+.comments input[type="text"] {
+    border-radius: 1px;
+    width: 80%;
+    border-width: 1px;
+    border-color: RGBA(121, 121, 121, 1);
+    border-style: dotted;
+    background-color: RGBA(249, 249, 249, 1);
+    padding: 5px;
+}
+#respond {} #reply-title {} #cancel-comment-reply-link {} #commentform {} #author {} #email {} #url {} #comment #submit .comment-notes {} .required {} .comment-form-author {} .comment-form-email {} .comment-form-url {} .comment-form-comment {} .form-allowed-tags {} .form-submit {};
+ .blog-comment {
+    margin-top: 50px;
+    padding-top: 40px;
+}
+.responses {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid RGBA(249, 249, 249, 1);
+}
