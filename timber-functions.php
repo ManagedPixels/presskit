@@ -60,7 +60,7 @@ function add_to_context($data) {
 
 	//sidebars
 	$sidebars['sidebar']      = Timber::get_widgets('primary-sidebar');
-	$sidebars['sidebar_2']    = Timber::get_widgets('sidebar-2');
+	$sidebars['secondary']    = Timber::get_widgets('secondary-sidebar');
 	$sidebars['info_1']       = Timber::get_widgets('info-1');
 	$sidebars['info_2']       = Timber::get_widgets('info-2');
 	$sidebars['info_3']       = Timber::get_widgets('info-3');
