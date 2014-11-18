@@ -5307,9 +5307,9 @@ body {
   height: 231px;
 }
 .footer {
-  margin-top: 60px;
-  height: 90px;
-  padding: 40px 0 40px;
+  margin-top: 0px;
+/*  height: 90px;*/
+/*  padding: 40px 0 40px;*/
 }
 .padding-none {
   padding: 0 !important;
