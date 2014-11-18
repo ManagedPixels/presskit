@@ -232,8 +232,7 @@
             </div>
             <div class="col-md-4">
                 <div class="sidebar">
-                    {{sidebars.sidebar}}
-                    <aside>
+                   <aside>
                         <h1>Free News Letter</h1>
 
                         <p>Get the latest News &AMP; Updates via email .</p>
@@ -250,27 +249,8 @@
                         </form>
                         <small>Absolutely no spam. We Guarantee it!</small>
                     </aside>
-                    <aside>
-                        <h1>Lorem ipsum dolor size size.</h1>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci, aperiam delectus
-                            dolore eaque eius eligendi eveniet expedita fuga iste itaque libero minima officiis quod
-                            reiciendis similique sint sit voluptate?</p>
-                    </aside>
-                    <aside>
-                        <h1>Eum perspiciatis, temporibus?</h1>
-
-                        <p>Architecto, dolores ducimus eius illo laborum repudiandae rerum unde. Aliquam aliquid
-                            aperiam architecto at, aut dolores ea eaque earum error excepturi ipsum maiores maxime
-                            quae rem repudiandae rerum saepe, vitae!</p>
-                    </aside>
-                    <aside>
-                        <h1>Impedit, libero, veritatis?</h1>
-
-                        <p>Commodi culpa dolore, expedita impedit ipsa, iste minus nihil obcaecati odio quam, quod
-                            ratione repellendus soluta vitae voluptatum? Aperiam exercitationem magnam sint.
-                            Aspernatur dicta doloribus omnis reprehenderit sequi totam vitae!</p>
-                    </aside>
+                    {{sidebars.sidebar}}
+                   
                 </div>
             </div>
         </div>
@@ -283,9 +263,7 @@
 
     <div class="container footer">
     {% block footer_line %}    
-        <div class="col-sm-12">
-            <p class="text-center">© SG.Kit 2013 <!-- ngInclude: e.social --></p>
-        </div>
+        
         <div class="col-sm-12">
                 <span class="text-center">
                         <ul class="social list-inline ng-scope">
@@ -295,6 +273,9 @@
                             <li><i class="fa fa-rss-square"></i></li>
                         </ul>
                     </span>
+        </div>
+        <div class="col-sm-12">
+            <p class="text-center">© SG.Kit 2013 <!-- ngInclude: e.social --></p>
         </div>
      {% endblock footer_line %}
      </div>    
