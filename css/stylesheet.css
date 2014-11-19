@@ -43,10 +43,11 @@ h5 {
 p {
     font-size: 16px;
     font-size: 1.6rem;
-    -webkit-justify-content: flex-end;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    line-height: 1.6;
+}
+
+.post p {
+    line-height: 1.7;
 }
 #page > header,
 #page > main,
@@ -307,4 +308,14 @@ footer .fa {
 }
 footer .fa:hover {
     color: RGBA(121, 121, 121, 0.8);
+}
+a {
+    color: RGBA(121, 121, 121, 1);
+/*    border-bottom: 1px dotted RGBA(121, 121, 121, 0.3);*/
+/*    padding-bottom: 3px;*/
+}
+
+a:hover, a:visited {
+    text-decoration: none;
+    border-bottom: none;
 }
