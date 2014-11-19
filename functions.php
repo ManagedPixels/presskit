@@ -165,7 +165,7 @@ add_action('wp_enqueue_scripts', 'bj_scripts');
  */
 // $client = new GuzzleHttp\Client();
 // $res    = $client->get('https://api.github.com/user', [
-// 		'auth' => ['shawnsandy', 'ss7860501624isme']
+// 	'auth' => ['username', 'password']
 // 	]);
 // echo $res->getStatusCode();// 200
 // echo $res->getHeader('content-type');
@@ -192,3 +192,5 @@ $press_sample = MpLoader\Post\CustomTypes::factory('indeshop')->register_post_ty
 
 //load the 2 default widgets
 $press_widget = MpLoader\Utilities\Widget::factory();
+
+//$press_widget->
