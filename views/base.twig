@@ -152,15 +152,15 @@
 </section>
 {% endblock features %}
 {% block articles %}
-<section id="articles">
-
+<section id="articles"></section>
 {% endblock  articles %}
 <main>
 {% block main %}
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
-            {% block content %}
+            {% block postcontent %}
+                <div class="col-md-8">
+                    {% block content %}
                 <div class="post">
                     <!--articles-->
                     <article class="">
@@ -228,8 +228,9 @@
                             </aside>
                     </article>
                 </div>
-            {% endblock content %}
+                    {% endblock content %}
             </div>
+
             <div class="col-md-4">
                 <div class="sidebar">
                    <aside>
@@ -250,9 +251,12 @@
                         <small>Absolutely no spam. We Guarantee it!</small>
                     </aside>
                     {{sidebars.sidebar}}
-                   
+                    {{sidebars.secondary}}
+
                 </div>
             </div>
+ {% endblock postcontent %}
+
         </div>
 
     </div>
