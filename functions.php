@@ -183,6 +183,24 @@ add_action('wp_enqueue_scripts', 'bj_scripts');
 
 //$foo->print_it();
 
+
+/**
+ * check for wp-autoload
+ * load the functions
+ */
+if(class_exists("mp_autoload")):
+
+
+
+
+/**
+ * Theme customizer defaults
+ */
+
+$cutomizer = MpLoader\Customizer\Setup::factory();
+
+
+
 //$amenu = MpLoader\Admin\Menu::factory();
 $press_adminbar = MpLoader\Admin\PostMenus::factory()->create_nodes();
 
@@ -194,3 +212,6 @@ $press_sample = MpLoader\Post\CustomTypes::factory('indeshop')->register_post_ty
 $press_widget = MpLoader\Utilities\Widget::factory();
 
 //$press_widget->
+
+
+endif ;
