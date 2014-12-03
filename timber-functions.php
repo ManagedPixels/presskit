@@ -122,7 +122,7 @@ function myfoo($text) {
 function header_styles() {
 	ob_start()
 	?>
-														    <link rel="shortcut icon" href="<?php echo Theme_Function::file_uri('images/favicon.ico');?>">
+<link rel="shortcut icon" href="<?php echo Theme_Function::file_uri('images/favicon.ico');?>">
 
 	<?php
 	return ob_get_clean();
